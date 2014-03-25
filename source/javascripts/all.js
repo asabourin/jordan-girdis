@@ -9,8 +9,7 @@ $(document).ready(function(){
 
 function maximizeTitle() {
 	textFit($('#title')[0], {maxFontSize: 250})
-    $('#subtitle').css("top", $(".textFitted").css("font-size")); //Subtitle just below big title
-    textFit($('#subtitle')[0], {maxFontSize: 250})
+  textFit($('#subtitle')[0], {maxFontSize: 250})
 }
 
 
