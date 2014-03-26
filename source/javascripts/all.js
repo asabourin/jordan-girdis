@@ -9,6 +9,7 @@ $(document).ready(function(){
 
 function maximizeTitle() {
 	textFit($('#title')[0], {maxFontSize: 250})
+  $('#title').css("line-height", $(".textFitted").css("font-size"));
   textFit($('#subtitle')[0], {maxFontSize: 250})
 }
 
@@ -23,12 +24,12 @@ function setupScrollSpy() {
 			max: position.top + Math.round(section.height()/2),
 			onEnter: function(element, position) {
 				$("#link-"+element.id).addClass('active');
-                $("#article-"+element.id).fadeIn(600);
-                transitionBackgrounds(backgroundURL)
+        $("#"+element.id).children().fadeIn(600);
+        transitionBackgrounds(backgroundURL)
 			},
 			onLeave: function(element, position) {
 				$("#link-"+element.id).removeClass('active');
-                $("#article-"+element.id).fadeOut();
+        $("#"+element.id).children().fadeOut();
 			}
 		});
 	});
