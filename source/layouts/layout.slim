@@ -10,6 +10,8 @@ html
     <!-- Use title if it's in the page YAML frontmatter -->
     title = current_page.data.title || "The Middleman"
     
+    link rel="icon" type="image/ico" href="/images/favicon.ico"
+    
     = stylesheet_link_tag "normalize", "all", "font-awesome.min"
     = javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js", "all"
     link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'
